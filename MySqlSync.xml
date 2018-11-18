@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0.0" type="plugin" group="api">
+  <name>MySqlSync</name>
+  <version>1.0.0</version>
+  <creationDate>2018-11-18</creationDate>
+  <author>Peter Ullrich</author>
+  <copyright>Copyright (C) 2004-2018. All rights reserved.</copyright>
+
+  <files>
+    <filename plugin="MySqlSync">MySqlSync.php</filename>
+    <folder>MySqlSync</folder>
+  </files>
+
+  <administration>
+    <files folder="admin">
+      <folder>sql</folder>
+    </files>
+  </administration>
+
+  <install>
+    <!-- Runs on install -->
+    <sql>
+      <file driver="mysql" charset="utf8">sql/install.mysql-sync.utf8.sql</file>
+    </sql>
+  </install>
+
+  <uninstall>
+    <!-- Runs on uninstall -->
+    <sql>
+      <file driver="mysql" charset="utf8">sql/uninstall.mysql-sync.utf8.sql</file>
+    </sql>
+  </uninstall>
+
+</extension> 
